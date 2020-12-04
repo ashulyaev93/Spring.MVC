@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Spring MVC GeekApp</title>
+</head>
+
+<body>
+    <h1>Список клиентов:</h1>
+    <table>
+        <thead>
+        <tr>
+            <td>Id</td>
+            <td>Имя</td>
+            <td>Почта</td>
+            <td>Телефон</td>
+            <td>Операции</td>
+        </tr>
+        </thead>
+        <tbody>
+        <!--/*@thymesVar id="customers" type="java.util.List<com.geekbrains.spring.mvc.model.Customer>"*/-->
+        <tr th:each="customer : ${customers}">
+                <td th:text="${customer.id}"></td>
+                <td th:text="${customer.name}"></td>
+                <td th:text="${customer.email}"></td>
+                <td th:text="${customer.phone}"></td>
+                <td><a th:href="@{'/customers/edit/' + ${customer.id}}" >Редактировать</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/}">на Главную страницу</a>
+    <a th:href="@{/customers/add}">Добавить клиента</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Spring MVC GeekApp</title>
+</head>
+
+<body>
+<h1>данные клиента</h1>
+<!--/*@thymesVar id="customer" type="com.geekbrains.spring.mvc.model.Customer"*/-->
+<p th:text="${customer.name}"/>
+<p th:text="${customer.phone}"/>
+<br>
+<a th:href="@{/}">на Главную страницу</a>
+</body>
+</html>

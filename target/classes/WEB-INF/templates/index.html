@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Spring MVC GeekApp</title>
+</head>
+
+<body>
+    <h1>Веб-приложение: Spring MVC</h1>
+    <br>
+    <h4>Наши клиенты</h4>
+    <br>
+    <a th:href="@{/customers}">Список клиентов</a>
+    <br>
+    <a th:href="@{/customers/add}">Добавить нового клиента</a>
+</body>
+</html>
