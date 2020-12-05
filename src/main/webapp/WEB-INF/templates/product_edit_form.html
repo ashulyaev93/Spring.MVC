@@ -13,11 +13,13 @@
     <form th:action="@{/customers/edit}" th:object="${customer}" method="POST">
         <input hidden th:field="*{id}"/>
         <br>
-        Name: <input th:field="*{name}"/>
+        Title: <input th:field="*{title}"/>
         <br>
-        Email: <input th:field="*{email}"/>
+        Desc: <input th:field="*{description}"/>
         <br>
-        Phone: <input th:field="*{phone}"/>
+        Brand: <input th:field="*{brand}"/>
+        <br>
+        Price: <input th:field="*{price}"/>
         <br>
         <input type="submit" value="Submit" />
     </form>
