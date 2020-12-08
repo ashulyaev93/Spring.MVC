@@ -87,20 +87,4 @@ public class Product {
                 ", price'" + price + '\'' +
                 '}';
     }
-
-    public Long size(int i) {
-        return size(100);
-    }
-
-    public Object add(Product product) {
-        return add(product);
-    }
-
-    public Product get(int i) {
-        return get(i);
-    }
-
-    public Object set(int i, Product product) {
-        return set(i,product);
-    }
 }
