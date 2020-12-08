@@ -16,10 +16,10 @@ public class ProductRepository {
     @PostConstruct
     public void init() {
         this.product = new ArrayList<>();
-        this.product.add(new Product(1L, "Alex", "test1@email.ru", "+79000000001", "10"));
-        this.product.add(new Product(2L, "Dima", "test2@email.ru", "+79000000002", "10"));
-        this.product.add(new Product(3L, "Anna", "test3@email.ru", "+79000000003", "10"));
-        this.product.add(new Product(4L, "Lena", "test4@email.ru", "+79000000004", "10"));
+        this.product.add(new Product(1L, "Апельсин", "сладкий, как мед", "EcoFruit", "100"));
+        this.product.add(new Product(2L, "Лимонад", "сильногазированный", "Coca-Cola", "30"));
+        this.product.add(new Product(3L, "Хлеб", "мягкий", "Московский", "25"));
+        this.product.add(new Product(4L, "Вода", "с гор Кавказа", "бонАква", "50"));
     }
 
     public List<Product> findAll() {
@@ -28,11 +28,11 @@ public class ProductRepository {
 
     public Product saveOrUpdate(Product product) {
         if (product.getId() == null) {
-            product.setId(product.size()+1L);
+            product.setId(product.size(10)+1L);
             product.add(product);
             return product;
         } else {
-            for (int i = 0; i < product.size(); i++) {
+            for (int i = 0; i < product.size(10); i++) {
                 if (product.get(i).getId().equals(product.getId())) {
                     product.set(i, product);
                     return product;

@@ -88,19 +88,19 @@ public class Product {
                 '}';
     }
 
-    public Long size() {
-        return null;
+    public Long size(int i) {
+        return size(100);
     }
 
     public Object add(Product product) {
-        return null;
+        return add(product);
     }
 
     public Product get(int i) {
-        return null;
+        return get(i);
     }
 
     public Object set(int i, Product product) {
-        return null;
+        return set(i,product);
     }
 }

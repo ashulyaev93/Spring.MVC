@@ -23,8 +23,6 @@ public class ProductController {
         this.productService = productService;
     }
 
-
-    // /add/customers
     @GetMapping
     public String showAll(Model model) {
         List<Product> products = productService.getAllProducts();
